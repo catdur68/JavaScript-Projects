@@ -21,4 +21,9 @@ document.write(student);
 document.write(Age);
 document.write(study_time);
 
-
+//chalenge page 60
+function usercopy (){ //defining the function and giving it a name
+    var new_text="This is what happens to copied text";//define the variable
+    var result = new_text.fontcolor("red");//using method to change the font color of the output text
+    document.getElementById("text_copied").innerHTML = result;
+}
