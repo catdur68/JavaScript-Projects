@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <script src="JavaScript_code_practice_function.js"></script>
+
+</head>
+
+<body>
+
+    <h1>Calling a function from JavaScript into HTML</h1>
+    
+        <p>The new price after price increase is
+            <button onclick="price_increase()" id="Updated_price">Click here!
+                <p id="Updated_price">
+                    <script>
+                    var price_t2 = price_increase(113,1.1);
+                    document.getElementById("Updated_price").innerHTML = price_t2;
+                    </script>
+                </p>
+            </button>
+        </p>
+        <br>
+        <br>
+  
+    
+</body>
+
+
+</html>
+
