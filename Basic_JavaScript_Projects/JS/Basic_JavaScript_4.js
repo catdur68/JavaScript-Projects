@@ -11,7 +11,7 @@ function stock_watch()
         rating: "C"
     };
     //document.getElementById("Dictionary").innerHTML = Stock.Price_Earning;
-    delete stock.Price_Earning;
+    delete Stock.Price_Earning;
     document.getElementById("Dictionary").innerHTML = Stock.Price_Earning;
    
 }
