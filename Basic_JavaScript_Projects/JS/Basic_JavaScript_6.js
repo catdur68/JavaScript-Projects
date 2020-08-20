@@ -37,7 +37,7 @@ function myFunction()
     " manufactured in " + Erik.Vehicle_Year + ".";
 }
 
-//
+//THIS IS NOT CLEAR - DO NOT USE 
 //Class Stock
 //{
    // string Name;
@@ -70,20 +70,20 @@ function Stock_Data()
 }
 
 function compare_Function()//what html is calling for
-{//definition of the count_Function
+{//definition of the compare_Function
     document.getElementById("Nested_Function").innerHTML = countDown();
     // what will be returned to html is calling for another
-    //function the count() function
+    //function the countDown() function
         function countDown()
             {
             
-        //definition of the count() function
-        // it has a starting point and a function which returns
-        //a value that becomes the new starting point
+        //definition of the countDown() function
+        // it has a current value and a function which returns
+        //a value that becomes the new current value
          
                 var current_value = 4;
-            //the count() function is now calling for
-            //the function Plus_1 which is defined as:
+            //the countDown() function is now calling for
+            //the function Minus_5 which is DEFINED AS:
                     function Minus_5()
                     {current_value -= 5;}
                 Minus_5();//performs instructions from function defined above
