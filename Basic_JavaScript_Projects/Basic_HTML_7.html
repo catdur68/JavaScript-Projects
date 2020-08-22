@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <script src="JS/Basic_JavaScript_7.js"></script>
+    <title>VARIABLES in js</title>
+
+</head>
+
+<body>
+    
+<h1>Local Variable</h1>
+<p>Calculates x = 1000 * 2.5, x being a local variable.
+    <p id="LOCAL_VARIABLE">
+        <script>local_variable()</script>
+    </p>
+</p>
+<br>
+<h1>Global variable</h1>
+    <p>Here we define Y for the rest of the entire program. It is not
+    define inside the function, but outside. In a way, 
+    it is floating. It can be called by any function in the program.
+    Each time the program encounters Y, it will refer to its
+    value as defined here. Y = 250 is a global Variable.
+    The function performs the operation 250 * 3.5 which is equal to 
+    <button onclick="calculate()">Click here</button>
+    <p id="test"></p>
+    </p>
+    <!--<script>calculate()</script>-->
+    </p>
+<br>
+
+<h1>Playing with dates and time in Javascript</h1>
+    <p>The current day is 
+        <p id="day">Date:
+        <script>
+            var today = new Date;
+            var date = today.getFullYear()+"-"+(today.getMonth()+1)+"-"+today.getDate();
+            document.getElementById("day").innerHTML = date;
+        </script>
+        </p>
+    </p>
+
+    <p>The current time is 
+        <p id="hour">Time: 
+        <script>
+            var today = new Date();
+            var time = today.getHours()+":"+today.getMinutes()+":"+today.getSeconds();
+            document.getElementById("hour").innerHTML = time;
+        </script>
+        </p>
+    </p
+
+    <p>The current date and time is 
+        <p id="date&hour">Date and Time: 
+        <script>
+            var today = new Date();
+            var date = today.getFullYear()+"-"+(today.getMonth()+1)+"-"+today.getDate();
+            var time = today.getHours()+":"+today.getMinutes()+":"+today.getSeconds();
+            var dateTime = date + " " + time;
+            document.getElementById("date&hour").innerHTML = dateTime;
+        </script>
+        </p>
+    </p>
+
+
+    <h1>Practicing Conditional statements Is it morning or afternoon or evening?</h1>
+    <h2>Greeting from 3 if-statements</h2>
+    <p id="msg"><script>greetings()</script>The current time is:
+        <p id="greeting">
+            <script>
+            var today = new Date();
+            var time = today.getHours()+":"+today.getMinutes()+":"+today.getSeconds();
+            document.getElementById("greeting").innerHTML = time;
+            </script>
+        </p>
+    </p>
+    <h2>Greeting from 1 if-statements and 1 else</h2>
+        <p>What time do you have (Hr:Mn)?
+            <input id="clock" value=""/>
+            <button onclick="greeting_else()">Click Here</button>            
+            <p id="customMsg"></p>
+        </p>
+        <h2>The "else if" condition</h2>
+        <p>Upon click, returns the current time, and greets accordingly
+            <!--<input id="curr_time" value=""/>-->
+            <button onclick="elseif()">Click Here</button>            
+            <p id="formalHello"></p>
+        </p>
+    <h1>This error is intentional</h1>
+        <p>see console log where we get this error message:
+            <q>Basic_HTML_7.html:93 Uncaught ReferenceError: Calc_err is not defined</q>
+            <script>Calc_err()</script></p>
+        </p>
+            
+        <p>with error fixed: 
+            <p id="err_fixed"><script>fix_err()</script></p>
+        </p>
+
+</body>
+
+
+</html>
