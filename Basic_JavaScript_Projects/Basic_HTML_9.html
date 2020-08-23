@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <script src="JS/Basic_JavaScript_9.js"></script>
+    <link rel="stylesheet" type="text/CSS" href="./CSS/Basic_CSS_1.css">
+    
+    <title>National Parks-Slide Show</title>
+
+</head>
+
+<body>
+<h3>Prelude: timer</h3>
+    <p>My first Program using JavaScript: How many seconds would you like to set
+        your alarm for?
+        <input id="seconds" value=""/>
+        <button onclick="countdown()">click here</button>
+        <p id="timer"></p>
+    </p>
+
+<h1>SlideShow</h1>
+<div class="container"><!--container for the pics-->
+    <!--Photo-->
+    <div class="mySlides">
+        <div class="pic_numb">1 / 8</div>
+        <img src="CSS/images/Thumb/thumbnail_1.jpg" style="width: 100%">
+        <div class="title">The Subway (Zion)</div>
+    </div>
+        <!--</div>-->
+    <div class="mySlides">
+        <!--repeat for the other 8 pics-->
+        <div class="pic_numb">2 / 8</div>
+        <img src="CSS/images/Thumb/thumbnail_2.jpg" style="width: 100%">
+        <div class="title">Riverside Walk (Zion)</div>
+    </div>
+
+    <div class="mySlides">
+        <!--repeat for the other 8 pics-->
+        <div class="pic_numb">3 / 8</div>
+        <img src="CSS/images/Thumb/thumbnail_3.jpg" style="width: 100%">
+        <div class="title">Emerald Pools Trail (Zion)</div>
+    </div>
+
+    <div class="mySlides">
+        <!--repeat for the other 8 pics-->
+        <div class="pic_numb">4 / 8</div>
+        <img src="CSS/images/Thumb/thumbnail_4.jpg" style="width: 100%">
+        <div class="title">Angels Landing (Zion)</div>
+    </div>
+
+    <div class="mySlides">
+        <!--repeat for the other 8 pics-->
+        <div class="pic_numb">5 / 8</div>
+        <img src="CSS/images/Thumb/thumbnail_5.jpg" style="width: 100%">
+        <div class="title">Grand Teton - View 1</div>
+    </div>
+
+    <div class="mySlides">
+        <!--repeat for the other 8 pics-->
+        <div class="pic_numb">6 / 8</div>
+        <img src="CSS/images/Thumb/thumbnail_6.jpg" style="width: 100%">
+        <div class="title">Grand Teton - View 2</div>
+    </div>
+
+        <div class="mySlides">
+        <!--repeat for the other 8 pics-->
+        <div class="pic_numb">7 / 8</div>
+        <img src="CSS/images/Thumb/thumbnail_8.jpg" style="width: 100%">
+        <div class="title">Crystal (Petrified Forest)</div>
+    </div>
+
+    <div class="mySlides">
+        <!--repeat for the other 8 pics-->
+        <div class="pic_numb">8 / 8</div>
+        <img src="CSS/images/Thumb/thumbnail_9.jpg" style="width: 100%">
+        <div class="title">Dream Lake (Rocky Mountain)</div>
+    </div>
+    <!--NEXT AND PREVIOUS BUTTONS-->
+    <!--<div class="overlay">-->
+    <a class="next" onclick="nextpic(1)">&#10095</a> <!--that the arrow symbol-->
+    <a class="prev" onclick="nextpic(-1)">&#10094</a>
+    <!--</div>-->
+
+</div> <!--end of container-->
+<br>
+<div class="dot">
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+    </div>
+    
+</div>   
+
+</body>
+
+
+</html>
