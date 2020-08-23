@@ -27,7 +27,7 @@ function countdown()
 var slideIndex = 1;
 showSlides(slideIndex);
 
-function plusSlides(n) {
+function nextpic (n) {
   showSlides(slideIndex += n);
 }
 
