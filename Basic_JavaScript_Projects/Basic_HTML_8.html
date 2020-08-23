@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <script src="JS/Basic_JavaScript_8.js"></script>
+    <title>Things to do with Data in js</title>
+
+</head>
+
+<body>
+    <h1>Concatenate</h1>
+    <p>Assembles several string variables into 1
+        string variable. Ex: "Hello" + "World" = "Hello World".
+        Useful when reconstructing addresses pulled
+        from a database. Here the sentence (the new variable)
+        is made of 4 separate string variables.
+        <button onclick="sentence()">click me</button>
+        <p id="assembled"></p>
+    </p>
+    <br>
+    <h1>Slice</h1>
+    <p>This method retrieves into a new variable the character(s)
+        contained between 2 positions in the string. The number given
+        for the first position is the one preceding the start 
+        of what you are looking for. In this example, the word
+        "unfairness" starts in position 25 in the string, and
+        we ask the method to look after 24. 
+        <button onclick="slice()">One Key-Word</button>
+        <p id="oneWord"></p>
+    </p>
+    <h1>Convert to Upper case</h1>
+    <p>that is the key-word:
+        <p id="convert">
+        <script>to_majuscule()</script>
+        </p>
+
+    </p>
+    <h1>Search for something in a string (case insensitive)</h1>
+    <p>if it finds something it returns a number which 
+        indicates where the position in the string it found it. 
+        If not found, returns -1 (like "negative, not found"). This 
+        could be useful when you want to slice a section of 
+        a string. You would first determine if something exists
+        in the string (search) and then take that section
+        The variable in this example is: "the only Arab countries
+        and make it a new variable.
+        with normal ties with Israel." The method var.search()
+         is looking for the word "israel", not case sensitive. 
+        This word is found in position 46. 
+         <p id="trouve"></p>    
+    <p><script>mySearch()</script></p>
+    </p>
+
+    <h1>Convert a number to string</h1>
+    <p>the string Method (toString())
+    <p id="Numb_to_string">Convert # 100 to "100"</p>
+    <button onclick="convertNumb()">Click me</button>
+    </p>
+
+    <h1>the toPrecision Method</h1>
+    <p>Keeping as many decimals as you need. Here we keep 5 
+        decimals for the pi number. Warning: the method regards
+        the period as a decimal, so we instruct 6 to obtain
+        5 decimals.
+        <p id="precisely">Keeps 5 decimals from pi = 3.14159265359</p>
+    <button onclick="Keep_decimals()">Click me</button>
+    </p>
+
+    <h1>Converting a number with decimals to string</h1>
+    <p>here we round pi to 2 decimals and convert to string with the toFixed() Method.
+    Warning: unlike the toPrecision method, if we want 2 decimals, we put
+    2 as parameter.
+        <p id="numb_Rd_str">Keeps 2 decimals from pi = 3.14159265359, and converts to string</p>
+        <button onclick="mytoFixed()">Click me</button>
+    </p>
+
+    <h1>The value of</h1>
+    <p>Basically returns the PRIMITIVE value contained in the string.
+        Not sure in which context this would be more helpful
+        than typing the value directly in HTML.
+        <button onclick="primitive()">Click here</button>
+        <p id="val"></p>
+    </p>
+    
+
+</body>
+
+
+</html>
