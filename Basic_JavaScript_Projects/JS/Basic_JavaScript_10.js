@@ -56,12 +56,12 @@ function constant_function() {
 var X = 1125;
 function let_var_be () {
     var Y = 0.10;
-    document.write(X * Y); //returns 112.5
+    (X * Y); //returns 112.5
     {
         let Y = 0.15;
         var Z = (X * Y);
-        //document.getElementById("letItBe").innerHTML = Z;
-        document.write("with a rate increase, X would increase by " + Z);
+        document.getElementById("letItBe").innerHTML = Z;
+        //document.write("with a rate increase, X would increase by " + Z);
     }
 
 }
@@ -74,4 +74,14 @@ var c = add_2(3,15); //calls the function
 console.log(c)
 document.getElementById("function_return").innerHTML = c;
 
+let driver = {
+    gender: "male",
+    age:  24,
+    name: "Henry",
+    is_:"driving",
+    speed: 60,
+    speed_up : accelerate() {
+        return 80;}
+    document.getElementById("new_speed").innerHTML = this.speed_up;
+}
 
