@@ -1,6 +1,6 @@
 function call_loop () {
     var next_count = "";
-    var X = 0;//starting value
+    var X = 7;//starting value
     while (X <= 15 ) {
         next_count += "<br>" + X;
         X++;
@@ -18,7 +18,6 @@ var content = ""; //like an empty bucket
 var Y;
 function for_loop() {
     for (Y = 0; Y < instruments.length; Y++) {
-
         // sets the initial value for Y to 0
         // counts the number of items in the list (length)
         //for any Y less than length, execute:
@@ -29,7 +28,7 @@ function for_loop() {
     document.getElementById("List_of_instruments").innerHTML = content;
 } 
 function array_function() {
-    var vehicles = []; //empty array of cat pictures
+    var vehicles = []; //empty array/bucket
     vehicles[0] = "car";
     vehicles[1] = "boat"; //we are putting values in the array 
     vehicles[2] = "motorcycle"; //at some precise location
@@ -50,9 +49,7 @@ function constant_function() {
      + ". He is in " + patient.condition + " condition."
    
 }
-//this function only runs kinda well with document.write
-//but it also erase anything on the web page ! why? the document.getElementById does 
-//not want to work
+
 var X = 1125;
 function let_var_be () {
     var Y = 0.10;
@@ -61,27 +58,56 @@ function let_var_be () {
         let Y = 0.15;
         var Z = (X * Y);
         document.getElementById("letItBe").innerHTML = Z;
-        //document.write("with a rate increase, X would increase by " + Z);
     }
 
 }
-//this function gives the correct result in the console, but does not work
-//with html 
-var c = add_2(3,15); //calls the function
-    function add_2 (a,b) {//definition of the function
-    return a + b; //what will be return and assigned to variable
+ function add_2 (a,b) {//definition of the function
+    return a + b; //what will be returned and assigned to variable
 }
-console.log(c)
-document.getElementById("function_return").innerHTML = c;
 
-let driver = {
-    gender: "male",
+function myFunction() {
+    var c = add_2(3, 15);
+    document.getElementById("function_return").innerHTML = c;
+}
+
+//creating an object with the let keyword
+let driver = {//object = properties + behavior
+    gender: "male ", //watch out for the comma
     age:  24,
-    name: "Henry",
-    is_:"driving",
+    name: "Henry ",
+    is_:"driving ",
     speed: 60,
-    speed_up : accelerate() {
-        return 80;}
-    document.getElementById("new_speed").innerHTML = this.speed_up;
-}
+    accelerate: function() {//behavior = apply the method to make an
+        //object do something
+        return this.speed + 20 ;}
+};
+document.getElementById("driver").innerHTML = driver.accelerate();
 
+
+var text = "";
+var i;
+for (i=11; i < 20; i++) {
+    if (i==17) {break;}
+    text += "counting " + i + "<br>";
+}
+document.getElementById("break_stat").innerHTML = text;
+
+var text2 = "";
+var i;
+for (i=2; i<11; i++) {
+    if (i==7) {continue;}
+    text2 += "counting " + i + "<br>";
+}
+document.getElementById("continue_stat").innerHTML = text2;
+
+var groceries = ["apples", "banana", "oranges", "vegetables","milk", "eggs", "sugar", "flowers", "flour", "butter"];
+var cart = ""; //like an empty bucket
+var x;
+function to_buy() {
+    for (x = 0; x < groceries.length; x++) {
+        if (groceries[x] == "flowers") {break;}
+        if (groceries[x] == "vegetables") {continue;}
+        cart += groceries[x] + "<br>";
+        } 
+    document.getElementById("Grocery_list").innerHTML = cart;
+} 
