@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src = "react-dom.js"></script>
+    <script src="react.js"></script>
+    <!--<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>-->
+</head>
+
+<body>
+    <div id="My_React_Code"></div> <!--THIS CODE WILL CREATE A TIMER THAT COUNTS UPWARD-->
+    <script>
+        var Counter = React.createClass({ //CREATES A COMPONENT CLASS-THIS IS REACT SPECIFIC CODING
+            render: function() {
+                var time_Passed = Math.round(this.props.time_Passed / 100);
+                var seconds_Passed = time_Passed / 10 + (time_Passed % 10 ? '':'.0'); // ? = IF, TRUE, ELSE
+                var text = 'My React Code started running ' + seconds_Passed + ' seconds ago!';
+                return React.DOM.p(null, text);
+
+            }
+        })
+        var counter_Factory = React.createFactory(Counter); //FUNCTION THAT GENERATES AN OBJECT THAT CREATES OTHER OBJECTS
+
+        var start_Counting = new Date().getTime();
+        setInterval (function () {//THIS IS JAVASCRIPT - EVALUATES AN EXPRESSION AT SPECIFIED INTERVALS IN MILLISECONDS
+            ReactDOM.render( //RENDERS A REACT COMPONENT(S)
+                counter_Factory({time_Passed: new Date().getTime() - start_Counting}), document.getElementById('My_React_Code')
+            );
+        }, 50);
+
+    </script>
+
+
+</body>
+
+
+
+
+
+</html>
