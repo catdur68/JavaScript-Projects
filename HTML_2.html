@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="CSS/CSS-2.css"></script>
-    <script src="JavaScript/JavaScript_2.js"></script>
+    <script src="JavaScript/JavaScript_2.js" type="text/javascript" defer></script>
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>p221, p360</title>
@@ -12,44 +12,38 @@
 <body>
 
     <body>
-    <script>document.body.className += "fade-out";</script>
-    <script>
-       //$('body').fadeOut();
-       //$(function(){
-        //$('body').removeClass('fade-out');
-       //});
-      $(function(){
-          $(function(){
-              $("body").fadeOut(1000);
-          })
-        $("body").remove.fadeOut();
-       });
-
-       // $(function(){
-          // $("body").fadeIn();
-       //});
-
-        //$('body').remove.fadeOut();
-        //$('body').fadeIn(1000)
-        //$("body").fadeIn(3000);
-    </script>
+        <h3 id="test">is js working? yes if five</h3>
+        <script>testing()</script>
+        
+        
+        <script>document.body.className += 'fade-out';</script>
+            <script>
+            $(function() {
+                $('body').removeClass('fade-out');
+                });
+            </script>
 
     
     <h3>p221 - create a contact form - adding inline styles to individual element using JavaScript</h3>
 
     <div>
-        <form name="Contact" action="action_page.php" 
+        <form name="Contact" action="/action_page.php" 
             onsubmit="return validateForm()" method="post">
                 <!--<label>First Name</label>-->
-                First Name: <input type="text" name="FN" value=""><br>
+                First Name: <input type="text" name="FN" value="" required><br>
                 <!--<input type="text" id="FN" value="">-->
                 <!--<label>Last Name</label>-->
-                Last Name: <input type="text" name="LN" value=""><br>
-                <!--<input type="text" id="LN" value="">-->   
+                Last Name: <input type="text" name="LN" value="" required><br>
+                <!--<input type="text" id="LN" value="">-->
+                <!--<label>Telephone</label>-->
+                Phone Number: <input type="tel" name="P" pattern="[0-9]{3}-[0-9]{3}-[0-9}{4}" required><br>
+                <!--<input type="text" id="P" value="">-->   
                 <br>
-                <input type="submit" value="Submit">
+                <input id="type="submit" value="Submit">
+                
+                
         </form>
     </div>
-
+ 
 </body>
 </html>

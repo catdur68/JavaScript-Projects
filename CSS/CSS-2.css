@@ -4,12 +4,12 @@ html {
     
 body {
     opacity: 1;  
-    transition: 3s opacity;
-    font-family: Verdana, sans-serif;
+    transition: 1s opacity;
+    /*font-family: Verdana, sans-serif;
     margin: 0;
-    background-color: #f5f3f3;
+    background-color: #f5f3f3;*/
 }
-  
+ 
 body.fade.out {
     opacity: 0;
     transition: none;
@@ -20,7 +20,7 @@ form {
 }
 
 
-input[type=text], select {
+input[type=text], input[type=tel]  {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -28,16 +28,18 @@ input[type=text], select {
     border: 0.51px solid rgb(245, 242, 242);
     border-radius: 8px;
     box-sizing: border-box;
-    
+
+   
 }
 input[type=submit] {
-    /*width: 30%;*/
+    width: 150px;
     background-color: rgb(223, 218, 186);
     color: black;
     padding: 14px 20px;
     margin: 8px 0;
     border: 0.5px solid black;
     border-radius:8px;
+    font-size: 12px;
     cursor: pointer;
 }
 input[type=submit]:hover {
